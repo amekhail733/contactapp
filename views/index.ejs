@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+    <h1>Contacts</h1>
+    <ul>
+        <% contacts.forEach((contact, index) =>{ %>
+            <li>
+                <%= contact.name %>
+                <a href="/edit/<%= index %>"><button>Edit</button></a>
+                <a href="/view/<%= index %>"><button>View</button></a>
+                <a href="/delete/<%= index %>"><button>Delete</button></a>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/add">Add Contact</a>
+<%- include('partials/footer') %>
